@@ -6,7 +6,7 @@ async function provide(some) {
         headers: {
             "Content-Type": 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(some)
     }
     );
     console.log(response.json())
@@ -16,7 +16,7 @@ form.addEventListener('click', (e) => {
     e.preventDefault();
     let stuff = document.querySelector('#stuff').value;
     console.log(stuff);
-
+    provide();
     return stuff;
 })
 
